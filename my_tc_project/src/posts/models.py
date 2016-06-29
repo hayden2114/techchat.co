@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse
 # Create your models here.
 # model view controller 
 
-class Post(models.Model):
+class weiner(models.Model):
 	title = models.CharField(max_length=120)
 	content = models.TextField()
 	timeToRead = models.CharField(max_length = 20)
