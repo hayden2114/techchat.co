@@ -6,14 +6,3 @@ from django.core.urlresolvers import reverse
 # Create your models here.
 # model view controller 
 
-class Post(models.Model):
-	title = models.CharField(max_length=120)
-	content = models.TextField()
-	timeToRead = models.CharField(max_length = 20)
-	timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
-
-	def __unicode__(self):
-		return self.title
-
-	def get_absolute_url(self):
-		return reverse("posts:detail", kwargs={"id": self.id})
