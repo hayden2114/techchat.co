@@ -15,8 +15,6 @@ def post_create(request):
 		instance.save()
 		messages.success(request, "Wahoo, successfully created")
 		return HttpResponseRedirect(instance.get_absolute_url())
-	else:
-		messages.error(request, "Oops, something isn't right")
 	context = {
 		"form": form,
 	}
@@ -36,7 +34,7 @@ def post_list(request):
 		"object_list": queryset,
 		"title": "List"
 	}
-	return render(request, "index.html", context)
+	return render(request, "post_list.html", context)
 
 def post_update(request, id=None):
 	instance = get_object_or_404(Post, id=id)
