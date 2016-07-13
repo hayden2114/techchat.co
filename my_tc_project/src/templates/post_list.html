@@ -2,17 +2,17 @@
 
 {% block content %}
 
-<h1>{{title}} is working</h1>
+	<h1>{{title}} is working</h1>
 
-{% for obj in object_list %}
+	{% for obj in object_list %}
 
-{% url "posts:detail" id=obj.id %}
-<a href='{{ obj.get_absolute_url }}'> {{ obj.title }}</a></br>
-{{ obj.content }} </br>
-{{ obj.timestamp }} </br>
-{{ obj.timeToRead }} </br>
-{{ obj.id }} </br>
+		<a href='{{ obj.get_absolute_url }}'> {{ obj.title }}</a> </br>
+		{{ obj.content }} </br>
+		{{ obj.timestamp }} </br>
+		{{ obj.timeToRead }} </br>
+		{{ obj.id }} </br>
+		</br>
 
-{% endfor %}
+	{% endfor %}
 
 {% endblock content %}

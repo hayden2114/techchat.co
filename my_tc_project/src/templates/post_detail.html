@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head_title %} 
-{{ instance.title }} | {{ block.super }}
+{{ block.super }} | {{ instance.title }}
 {% endblock head_title %}
 
 <style>
@@ -28,6 +28,3 @@ h1 {
 
 {% endblock content %}
 
-</body>
-
-</html>

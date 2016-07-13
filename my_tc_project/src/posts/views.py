@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect 
 
 # Create your views here. How is your HTML code going to be dispalyed or "viewed"
-# What we are writing here is what the server willl do. We act like the server. 
+# What we are writing here is what the server will do. We act like the server. 
 
 from .forms import PostForm
 from .models import Post 
@@ -47,7 +47,7 @@ def post_update(request, id=None):
 	context = {
 		"title": instance.title,
 		"instance": instance,
-		"form":form,
+		"form": form,
 	}
 	return render(request, "post_form.html", context)
 
