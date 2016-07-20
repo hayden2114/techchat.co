@@ -4,26 +4,18 @@
 {{ block.super }} | {{ instance.title }}
 {% endblock head_title %}
 
-<style>
-{% block style %}
-
-h1 {
-	color: #777777;
-}
-
-{% endblock style %}
-</style>
 
 {% block content %}
+<div class='col-sm-6 col-sm-offset-3'>
+	{% if instance.image %}
+	<img src="{{ instance.image.url }}" class="img-responsive"/>
+	{% endif %}
+<h1>{{title}}  <small>{{ instance.timestamp }} {{ instance.timeToRead }}</small></h1>
 
-<h1>{{title}}</h1>
+{{ instance.content|linebreaks }} </br>
 
 
-{{ instance.title }} </br>
-{{ instance.content }} </br>
-{{ instance.timestamp }} </br>
-{{ instance.timeToRead }} </br>
-{{ instance.id }} </br>
+</div>
 
 
 {% endblock content %}
