@@ -9,5 +9,6 @@ class PostForm(forms.ModelForm):
 			"title",
 			"image",
 			"content",
-			"timeToRead"
+			"timeToRead",
+			"publish"
 		]
