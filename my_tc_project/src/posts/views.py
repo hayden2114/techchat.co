@@ -49,10 +49,11 @@ def post_list(request):
 	except EmptyPage:
 		# If page is out of range (e.g. 9999), deliver last page of results.
 		queryset = paginator.page(paginator.num_pages)
+	
 
 	context = {
 		"object_list": queryset,
-		"title": "List",
+		"title": "Techchat",
 		"page_request_var": page_request_var
 	}
 	return render(request, "post_list.html", context)

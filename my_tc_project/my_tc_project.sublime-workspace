@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"back",
+				"background-size"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"tim",
+				"timeToRead"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"pre",
+				"pre_save_post_receiver"
+			],
+			[
 				"margin",
 				"margin-right"
 			],
@@ -30,10 +50,6 @@
 			[
 				"border-right",
 				"border-right-color"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"border-bott",
@@ -72,10 +88,6 @@
 				"background-color"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
 				"ba",
 				"background-color"
 			],
@@ -103,6 +115,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/templates/base.html",
+			"settings":
+			{
+				"buffer_size": 1658,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/post_detail.html",
+			"settings":
+			{
+				"buffer_size": 958,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/post_list.html",
+			"settings":
+			{
+				"buffer_size": 2144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/posts/views.py",
+			"settings":
+			{
+				"buffer_size": 2688,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/User/safari-preview.sublime-build",
 	"command_palette":
@@ -136,6 +180,25 @@
 	},
 	"file_history":
 	[
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/models.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/views.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/lib/python2.7/site-packages/django/core/handlers/base.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/urls.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/forms.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/my_tc_project/urls.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/templates/post_form.html",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/my_tc_project/settings.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/static_cdn",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/static/css/base.css",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/static",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/my_tc_project/__init__.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/templates/base.html",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/templates/post_detail.html",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/templates/post_list.html",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/templates/messages_display.html",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/templates/index.html",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/admin.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/urls.py - posts",
 		"/Users/haydengreer/Documents/Github/TechChat/index.html",
 		"/Users/haydengreer/Desktop/TechChat-master/index.html",
 		"/Users/haydengreer/Documents/Sublime Text/COIL.sublime-project",
@@ -187,8 +250,115 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/templates/base.html",
+					"settings":
+					{
+						"buffer_size": 1658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								714,
+								914
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/templates/post_detail.html",
+					"settings":
+					{
+						"buffer_size": 958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/templates/post_list.html",
+					"settings":
+					{
+						"buffer_size": 2144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1569,
+								1569
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/posts/views.py",
+					"settings":
+					{
+						"buffer_size": 2688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1744,
+								1744
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 371.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -198,7 +368,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{

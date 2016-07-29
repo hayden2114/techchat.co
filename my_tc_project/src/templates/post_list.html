@@ -1,12 +1,27 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
+{% block styles %}
+	<style>
+		body {
+			background: url('{% static "img/coffee-background.jpg" %}') no-repeat center center fixed;
+			background-size: cover;
+		}
+
+
+	</style>
+{% endblock styles %}
+
+
+
 {% block content %}
 
-	<h1>{{title}}</h1>
+	<!-- <h1>{{title}}</h1> -->
 
 	<div class="row">
 	{% for obj in object_list %}
 
-  			<div class="col-sm-6">
+  			<div class="col-sm-4">
     			<div class="thumbnail"> 
 	    				{% if obj.image %}
 	    				<img src="{{ obj.image.url }}" class="img-responsive"/>
@@ -19,10 +34,31 @@
     		</div>
     	</div>
 		
-	{% cycle "" "</div><div class='row'>" %}
+	<!-- {% cycle "" "</div><div class='row'>" %} -->
 	{% endfor %}
 
-	<div class="pagination">
+	<div class="text-center"
+		<div class="pagination">
+	    	<span class="step-links">
+		        {% if object_list.has_previous %}
+		            <a href="?{{ page_request_var }}={{ object_list.previous_page_number }}"> << </a>
+		        {% endif %}
+
+		        <span class="current">
+		        	{% for obj in object_list %}
+		            	{{ obj.publish }}
+		            {% endfor %}
+		        </span>
+
+		        {% if object_list.has_next %}
+		            <a href="?{{ page_request_var }}={{ object_list.next_page_number }}"> >> </a>
+		        {% endif %}
+	    	</span>
+		</div> 
+	</div>
+
+
+	<!-- <div class="pagination">
     	<span class="step-links">
 	        {% if object_list.has_previous %}
 	            <a href="?{{ page_request_var }}={{ object_list.previous_page_number }}">previous</a>
@@ -36,9 +72,10 @@
 	            <a href="?{{ page_request_var }}={{ object_list.next_page_number }}">next</a>
 	        {% endif %}
     	</span>
-	</div>
+	</div> -->
 
 
 	</div>
 
 {% endblock content %}
+
