@@ -4,12 +4,32 @@
 		"selected_items":
 		[
 			[
-				"back",
-				"background-size"
+				"padding",
+				"padding-right"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"sto",
+				"story-image-title"
 			],
 			[
 				"font",
 				"font-weight"
+			],
+			[
+				"h",
+				"h2	Tag"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"back",
+				"background-size"
 			],
 			[
 				"tim",
@@ -24,24 +44,12 @@
 				"pre_save_post_receiver"
 			],
 			[
-				"margin",
-				"margin-right"
-			],
-			[
 				"ali",
 				"text-align"
 			],
 			[
 				"in",
 				"inline-block"
-			],
-			[
-				"padding",
-				"padding"
-			],
-			[
-				"paddin",
-				"padding"
 			],
 			[
 				"mar",
@@ -74,10 +82,6 @@
 			[
 				"pad",
 				"padding-bottom"
-			],
-			[
-				"h",
-				"h1	Tag"
 			],
 			[
 				"bac",
@@ -119,7 +123,7 @@
 			"file": "src/templates/base.html",
 			"settings":
 			{
-				"buffer_size": 1658,
+				"buffer_size": 1663,
 				"line_ending": "Unix"
 			}
 		},
@@ -127,15 +131,18 @@
 			"file": "src/templates/post_detail.html",
 			"settings":
 			{
-				"buffer_size": 958,
+				"buffer_size": 1122,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "{% extends \"base.html\" %}\n{% load staticfiles %}\n\n{% block styles %}\n	<style>\n		body {\n			background: url('{% static \"img/dark-lights-background.jpg\" %}') no-repeat center center fixed;\n			background-size: cover;\n		}\n\n		.nav-bar {\n			padding-bottom: 1%;\n\n			\n		}\n\n		.pagination {\n			padding-top: 2%;\n			color: white;\n		}\n\n\n\n		.story-title {\n			color: white;\n\n		}\n\n		a:hover {\n			color: white;\n		}\n\n		a {\n			color: white;\n		}\n\n		h5 {\n			font-weight: 600;\n			padding-left: 10%;\n		}\n\n		h6 {\n			font-weight: 600;\n			padding-right: 10%;\n		}\n\n		.test {\n			padding-right: 40px;\n		}\n\n\n	</style>\n{% endblock styles %}\n\n\n\n{% block content %}\n\n	<!-- <h1>{{title}}</h1> -->\n\n	<div class=\"row nav-bar\">\n		<img src=\"{% static 'img/FullColor-TechChatLogo.png' %}\" class=\"img-responsive center-block\"/>\n\n	</div>\n\n\n	<div class=\"row\">\n	{% for obj in object_list %}\n		<div class=\"col-sm-4 col-xs-12 story-image-title\">\n			<div class=\"\"> \n				<h5 class=\"pull-left\">{{ obj.timeToRead }}</h5><h6 class=\"pull-right\">{{obj.publish}}</h6>\n				{% if obj.image %}\n				<a href='{{ obj.get_absolute_url }}'><img src=\"{{ obj.image.url }}\" class=\"img-responsive img-rounded center-block\"/></a>\n				{% endif %}\n				<div class=\"story-title\">\n				<h3 class=\"text-center\"><a class=\"story-title\" href='{{ obj.get_absolute_url }}'> {{ obj.title }}</a> </h3> \n				<!-- <p>{{ obj.content|linebreaks|truncatechars:120 }}</p> -->\n			</div>\n		</div>\n    	</div>\n		\n	<!-- {% cycle \"\" \"</div><div class='row'>\" %} -->\n	{% endfor %}\n	</div>\n	<div class=\"text-center\">\n		<div class=\"pagination\">\n	    	<span class=\"step-links\">\n		        {% if object_list.has_previous %}\n		            <a class=\"test\" href=\"?{{ page_request_var }}={{ object_list.previous_page_number }}\"> << </a>\n		        {% endif %}\n\n		        <!-- <span class=\"current\">\n		        	\n		            {{ object_list.publish }}\n		            \n		        </span> -->\n		    \n\n		    \n		        {% if object_list.has_next %}\n		            <a href=\"?{{ page_request_var }}={{ object_list.next_page_number }}\"> >> </a>\n		        {% endif %}\n	    	</span>\n		</div> \n	</div>\n\n\n	<!-- <div class=\"pagination\">\n    	<span class=\"step-links\">\n	        {% if object_list.has_previous %}\n	            <a href=\"?{{ page_request_var }}={{ object_list.previous_page_number }}\">previous</a>\n	        {% endif %}\n\n	        <span class=\"current\">\n	            Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.\n	        </span>\n\n	        {% if object_list.has_next %}\n	            <a href=\"?{{ page_request_var }}={{ object_list.next_page_number }}\">next</a>\n	        {% endif %}\n    	</span>\n	</div> -->\n\n\n	\n\n{% endblock content %}\n\n\n\ntester_one_one@yahoo.com, tester_two_two@yahoo.com, Tester_three_three@yahoo.com, tester_four_four@yahoo.com, Tester_twenty_twenty@yahoo.com, tester_twentyone_twentyone@yahoo.com, Tester_twentytwo_twentytwo@yahoo.com, tester_twentythree_twentythree@yahoo.com, tester.five.five@gmail.com, Tester.six.six@gmail.com, Tester.seven.seven@gmail.com, Tester.eight.eight@gmail.com, Tester.nine.nine@aol.com, Tester.ten.ten@aol.com, Tester.eleven.eleven@aol.com, Tester_twelve_twelve@outlook.com, tester_thirteen_thirteen@outlook.com, tester_fourteen_fourteen@outlook.com, tester_fifteen_fifteen@outlook.com, tester_sixteen_sixteen@outlook.com, tester_seventeen_seventeen@outlook.com, tester_eighteen_eighteen@outlook.com, tester_nineteen_nineteen@outlook.com, Tester.oneone@yahoo.com, Tester.twotwo@yahoo.com, Tester.threethree@yahoo.com, Tester.fourfour@yahoo.com, Tester.onetwo21@yahoo.com, Tester.onethree21@yahoo.com, Tester.onefour21@yahoo.com, Tester.onefive21@yahoo.com, Testerfive21@gmail.com, Testersix21@gmail.com, Testerseven21@gmail.com, Testereight21@gmail.com, Testernine21@gmail.com, Testerten21@gmail.com, Testerone21@outlook.com, Testertwo21@outlook.com, Testerthree21@outlook.com, Testerfour21@outlook.com, Testerfive21@outlook.com, Testersix21@outlook.com, Testerseven21@outlook.com, Testereight21@outlook.com, Testeronetwo21@outlook.com, Testeronethree21@outlook.com, Testeronefour21@outlook.com, Testeronesix21@outlook.com, Testeroneseven21@outlook.com, testeronenine21@outlook.com, testeroneten21@outlook.com, testertwothree@outlook.com, testertwofour@outlook.com, testertwofive@outlook.com, Testertwo21@aol.com, Testerthree21@aol.com, Testerfour21@aol.com, testerfive21@aol.com, Testersix21@aol.com, Testerseven21@aol.com, haydengreer@yahoo.com, nicolas@coilapp.com, nicolas.perlick@utexas.edu\n\n",
 			"file": "src/templates/post_list.html",
+			"file_size": 2657,
+			"file_write_time": 1471645737000000,
 			"settings":
 			{
-				"buffer_size": 2144,
+				"buffer_size": 4466,
 				"line_ending": "Unix"
 			}
 		},
@@ -180,13 +187,13 @@
 	},
 	"file_history":
 	[
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/forms.py",
+		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/templates/post_form.html",
 		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/models.py",
 		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/views.py",
 		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/lib/python2.7/site-packages/django/core/handlers/base.py",
 		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/urls.py",
-		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/posts/forms.py",
 		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/my_tc_project/urls.py",
-		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/templates/post_form.html",
 		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/my_tc_project/settings.py",
 		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/static_cdn",
 		"/Users/haydengreer/Desktop/TechChat-blog/my_tc_project/src/static/css/base.css",
@@ -258,15 +265,15 @@
 					"file": "src/templates/base.html",
 					"settings":
 					{
-						"buffer_size": 1658,
+						"buffer_size": 1663,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								714,
-								914
+								789,
+								789
 							]
 						],
 						"settings":
@@ -285,23 +292,24 @@
 					"file": "src/templates/post_detail.html",
 					"settings":
 					{
-						"buffer_size": 958,
+						"buffer_size": 1122,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								47,
-								47
+								233,
+								233
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 12.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -311,23 +319,24 @@
 					"file": "src/templates/post_list.html",
 					"settings":
 					{
-						"buffer_size": 2144,
+						"buffer_size": 4466,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1569,
-								1569
+								2656,
+								4464
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 1670.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -354,7 +363,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 371.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

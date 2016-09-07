@@ -4,35 +4,54 @@
 {% block styles %}
 	<style>
 		body {
-			background: url('{% static "img/coffee-background.jpg" %}') no-repeat center center fixed;
+			background: url('{% static "img/dark-lights-background.jpg" %}') no-repeat center center fixed;
 			background-size: cover;
 		}
 
 		.nav-bar {
-			padding-bottom: 5%;
+			padding-bottom: 1%;
+
 			
 		}
 
 		.pagination {
-			padding-top: 20px;
+			padding-top: 2%;
+			color: white;
 		}
 
-		.story-image-title {
-			border-left: 2px solid white;
-		}
+
 
 		.story-title {
 			color: white;
+
 		}
 
 		a:hover {
 			color: white;
 		}
 
-		h5 {
-			color: #888;
-			font-weight: 400;
+		a {
+			color: white;
 		}
+
+		h3 {
+			font-size: 1.35em;
+		}
+
+		h5 {
+			font-weight: 600;
+			padding-left: 10%;
+		}
+
+		h6 {
+			font-weight: 600;
+			padding-right: 10%;
+		}
+
+		.test {
+			padding-right: 40px;
+		}
+
 
 	</style>
 {% endblock styles %}
@@ -53,11 +72,12 @@
 	{% for obj in object_list %}
 		<div class="col-sm-4 col-xs-12 story-image-title">
 			<div class=""> 
+				<h5 class="pull-left">{{ obj.timeToRead }}</h5><h6 class="pull-right">{{obj.publish}}</h6>
 				{% if obj.image %}
 				<a href='{{ obj.get_absolute_url }}'><img src="{{ obj.image.url }}" class="img-responsive img-rounded center-block"/></a>
 				{% endif %}
 				<div class="story-title">
-				<h3 class="text-center"><a class="story-title" href='{{ obj.get_absolute_url }}'> {{ obj.title }}</a> </h3> <h5 class="text-center">{{ obj.timeToRead }}</h5>
+				<h3 class="text-center"><a class="story-title" href='{{ obj.get_absolute_url }}'> {{ obj.title }}</a> </h3> 
 				<!-- <p>{{ obj.content|linebreaks|truncatechars:120 }}</p> -->
 			</div>
 		</div>
@@ -65,20 +85,22 @@
 		
 	<!-- {% cycle "" "</div><div class='row'>" %} -->
 	{% endfor %}
-
+	</div>
 	<div class="text-center">
 		<div class="pagination">
 	    	<span class="step-links">
 		        {% if object_list.has_previous %}
-		            <a href="?{{ page_request_var }}={{ object_list.previous_page_number }}"> << </a>
+		            <a class="test" href="?{{ page_request_var }}={{ object_list.previous_page_number }}"> << </a>
 		        {% endif %}
 
-		        <span class="current">
-		        	{% for obj in object_list %}
-		            	{{ obj.publish }}
-		            {% endfor %}
-		        </span>
+		        <!-- <span class="current">
+		        	
+		            {{ object_list.publish }}
+		            
+		        </span> -->
+		    
 
+		    
 		        {% if object_list.has_next %}
 		            <a href="?{{ page_request_var }}={{ object_list.next_page_number }}"> >> </a>
 		        {% endif %}
@@ -104,7 +126,9 @@
 	</div> -->
 
 
-	</div>
+	
 
 {% endblock content %}
+
+
 
