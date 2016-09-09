@@ -27,11 +27,18 @@
     <img src='{{ instance.image.url }}' class='img-responsive center-block img-rounded' />
     {% endif %} -->
 
-    {% if instance.video %}
+    <!-- {% if instance.video %}
     	{{ video }}
     {% else %}
     	<img src='{{ instance.image.url }}' class='img-responsive center-block img-rounded' />
-    {% endif %}
+    {% endif %} -->
+
+    
+    {% if instance.video %}
+	    {{ instance.video|safe }}
+	{% else %}
+		<img src='{{ instance.image.url }}' class='img-responsive center-block img-rounded' />
+    {% endif %} 
 
 
 <div class='row'>

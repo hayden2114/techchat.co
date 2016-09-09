@@ -8,6 +8,9 @@ from django.utils.text import slugify
 from django.utils import timezone
 
 
+
+
+
 # Create your models here.
 # model view controller 
 
@@ -25,10 +28,10 @@ def upload_location(instance, filename):
     """
     return "%s/%s" %(new_id, filename)
 
-
 class Post(models.Model):
 	title = models.CharField(max_length=120)
 	slug = models.SlugField(unique=True)
+	video = models.CharField(blank=True, max_length=255)
 	image = models.ImageField(upload_to=upload_location, 
 		null=True, 
 		blank=True, 
