@@ -7,6 +7,7 @@ from django.conf import settings
 from django.utils.text import slugify
 from django.utils import timezone
 
+
 # Create your models here.
 # model view controller 
 
