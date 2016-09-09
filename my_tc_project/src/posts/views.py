@@ -37,7 +37,7 @@ def post_detail(request, slug=None):
 	return render(request, "post_detail.html", context)
 
 def post_list(request):
-	queryset_list = Post.objects.all().order_by("-timestamp")
+	queryset_list = Post.objects.all().order_by("timestamp")
 	paginator = Paginator(queryset_list, 3) # Show 3 posts per page
 	page_request_var = "page"
 	page = request.GET.get(page_request_var)
