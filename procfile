@@ -1,1 +1,1 @@
-web: gunicorn techchat-blog.wsgi --log-file -
+web: gunicorn techchatblog.wsgi --log-file -
