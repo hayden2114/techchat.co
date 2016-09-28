@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'my_tc_project.urls'
+ROOT_URLCONF = 'my_tc_project.src.my_tc_project.urls'
 
 TEMPLATES = [
     {
