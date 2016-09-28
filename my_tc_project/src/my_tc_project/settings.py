@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'my_tc_project.posts',
+    'my_tc_project.src.posts',
 ]
 
 MIDDLEWARE_CLASSES = [
