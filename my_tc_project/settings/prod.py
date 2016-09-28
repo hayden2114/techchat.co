@@ -5,7 +5,7 @@ See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 import os
 
-from my_tc_project.settings import *
+from my_tc_project.settings.base import *
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
