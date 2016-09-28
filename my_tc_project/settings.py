@@ -123,11 +123,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "my_tc_project/static"),
     #'/var/www/static/', This is the hardcode version and we don't want that
 ]
 
 STATIC_ROOT = "/static_cdn/"
 
 MEDIA_URL = "/media_cdn/"
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "my_tc_project/media_cdn")
