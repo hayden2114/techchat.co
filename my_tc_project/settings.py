@@ -127,7 +127,7 @@ STATICFILES_DIRS = [
     #'/var/www/static/', This is the hardcode version and we don't want that
 ]
 
-STATIC_ROOT = "/static_cdn/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static_collected")
 
 MEDIA_URL = "/media_cdn/"
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "my_tc_project/media_cdn")
