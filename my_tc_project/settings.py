@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'my_tc_project.src.posts',
+    'my_tc_project.posts',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'my_tc_project.src.my_tc_project.urls'
+ROOT_URLCONF = 'my_tc_project.urls'
 
 TEMPLATES = [
     {

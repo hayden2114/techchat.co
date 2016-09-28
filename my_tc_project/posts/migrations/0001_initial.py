@@ -3,8 +3,7 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import posts.models
-
+from my_tc_project import posts
 
 class Migration(migrations.Migration):
 

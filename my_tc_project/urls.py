@@ -21,7 +21,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^posts/', include("my_tc_project.src.posts.urls", namespace='posts')), # app name, view module, function name 
+    url(r'^posts/', include("my_tc_project.posts.urls", namespace='posts')), # app name, view module, function name 
 ]
 
 

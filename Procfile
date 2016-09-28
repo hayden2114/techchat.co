@@ -1,1 +1,1 @@
-web: gunicorn my_tc_project.src.my_tc_project.wsgi --log-file -
+web: gunicorn my_tc_project.wsgi --log-file -
